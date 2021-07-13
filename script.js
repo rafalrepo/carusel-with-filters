@@ -116,8 +116,12 @@ if (carusel) {
 
     filtersItems.forEach(item => {
         item.addEventListener('click', function () {
-            filteredItems(this.dataset.value)
-            resetSwiper(swiper, carusel)
+            filtersItems.forEach(fi => {
+                fi.classList.remove('active');
+            })
+            filteredItems(this.dataset.value);
+            resetSwiper(swiper, carusel);
+            item.classList.add('active');
         })
     })
 
