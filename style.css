@@ -12,6 +12,7 @@
     height: 100vh;
     background: #E5E5E5;
     font-family: 'Mulish', sans-serif;
+    padding: 20px;
 }
 
 .figma-carusel-wrapper {
@@ -62,6 +63,7 @@
     justify-content: center;
     width: 100%;
     margin-top: 90px;
+    padding: 0 12.45%;
 }
 
 .figma-carusel__content {
@@ -87,6 +89,8 @@
 }
 
 .figma-carusel__image img {
+    width: 100%;
+    height: auto;
     transition: .3s;
 }
 
@@ -197,4 +201,55 @@
 
 .d-none {
     display: none;
+}
+
+@media(max-width: 1160px) {
+    .swiper-button-prev {
+        left: 1%;
+    }
+    
+    .swiper-button-next {
+        right: 1%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .figma-carusel__slide {
+        max-width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .figma-carusel-filters { 
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+    }
+    .figma-carusel-filters__item {
+        width: 50%;
+        justify-content: center;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        border: 0;
+        width: 30px;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        border: 0;
+    }
 }
